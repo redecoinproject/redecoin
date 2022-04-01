@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=redecoin Core
+Comment=Connect to the redecoin P2P Network
+Comment[de]=Verbinde mit dem redecoin peer-to-peer Netzwerk
+Comment[fr]=redecoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=redecoin, eşten eşe kriptografik sanal para birimi
+Exec=redecoin-qt %u
+Terminal=false
+Type=Application
+Icon=redecoin128
+MimeType=x-scheme-handler/redecoin;
+Categories=Office;Finance;

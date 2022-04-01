@@ -1,0 +1,8 @@
+/usr/bin/redecoin-cli		--	gen_context(system_u:object_r:redecoin_exec_t,s0)
+/usr/sbin/redecoind		--	gen_context(system_u:object_r:redecoin_exec_t,s0)
+/usr/lib(64)?/redecoin/redecoind		--	gen_context(system_u:object_r:redecoin_exec_t,s0)
+
+/etc/redecoin(/.*)?		gen_context(system_u:object_r:redecoin_conf_t,s0)
+/var/lib/redecoin(/.*)?		gen_context(system_u:object_r:redecoin_var_lib_t,s0)
+
+(/var)?/run/redecoind(/.*)?   gen_context(system_u:object_r:redecoin_var_run_t,s0)

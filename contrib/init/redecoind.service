@@ -1,0 +1,22 @@
+[Unit]
+Description=redecoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=redecoin
+Group=redecoin
+
+Type=forking
+PIDFile=/var/lib/redecoind/redecoind.pid
+ExecStart=/usr/bin/redecoind -daemon -pid=/var/lib/redecoind/redecoind.pid \
+-conf=/etc/redecoin/redecoin.conf -datadir=/var/lib/redecoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

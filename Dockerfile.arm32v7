@@ -1,0 +1,23 @@
+FROM arm32v7/ubuntu:latest
+
+MAINTAINER cade <cade.call@mediciventures.com>
+
+EXPOSE $RPCPORT
+
+EXPOSE $PORT
+
+RUN useradd -ms /bin/bash redecoin
+
+RUN mkdir /etc/redecoin
+
+RUN mkdir /var/lib/redecoin
+
+RUN chown redecoin:redecoin /etc/redecoin /var/lib/redecoin
+
+WORKDIR /home/redecoin
+
+COPY --chown=redecoin:redecoin linux64/* ./run.sh /home/redecoin/
+
+USER redecoin
+
+CMD ["/home/redecoin/run.sh"]

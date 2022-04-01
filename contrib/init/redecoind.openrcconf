@@ -1,0 +1,33 @@
+# /etc/conf.d/redecoind: config file for /etc/init.d/redecoind
+
+# Config file location
+#REDECOIND_CONFIGFILE="/etc/redecoin/redecoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $REDECOIND_USER)
+#REDECOIND_PIDDIR="/var/run/redecoind"
+
+# What filename to give the pidfile
+#REDECOIND_PIDFILE="${REDECOIND_PIDDIR}/redecoind.pid"
+
+# Where to write redecoind data (be mindful that the blockchain is large)
+#REDECOIND_DATADIR="/var/lib/redecoind"
+
+# User and group to own redecoind process
+#REDECOIND_USER="redecoin"
+#REDECOIND_GROUP="redecoin"
+
+# Path to redecoind executable
+#REDECOIND_BIN="/usr/bin/redecoind"
+
+# Nice value to run redecoind under
+#REDECOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#REDECOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for redecoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+REDECOIND_SIGTERM_TIMEOUT=60

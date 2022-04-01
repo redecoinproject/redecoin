@@ -1,0 +1,6 @@
+usr/local/bin/redecoin-qt usr/bin
+share/pixmaps/redecoin32.xpm usr/share/pixmaps
+share/pixmaps/redecoin16.xpm usr/share/pixmaps
+share/pixmaps/redecoin128.png usr/share/pixmaps
+debian/redecoin-qt.desktop usr/share/applications
+debian/redecoin-qt.protocol usr/share/kde4/services/
