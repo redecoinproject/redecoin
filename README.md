@@ -25,12 +25,13 @@ Minimum:
 
 * CPU with 2+ cores
 * 4GB RAM
+* High Performance SSD
 * 8 MBit/sec download Internet service
 
 Recommended:
 
 * Fast CPU with 4+ cores
 * 16GB+ RAM
-* High Performance SSD with at least 1TB free space
+* High Performance SSD
 * 25+ MBit/sec download Internet service
 
