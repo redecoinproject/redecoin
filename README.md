@@ -1,4 +1,4 @@
-## Faster start node sync
+## Faster geth start node sync
 ```
 ./geth --syncmode full console
 ```
