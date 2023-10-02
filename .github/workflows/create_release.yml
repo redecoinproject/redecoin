@@ -1,0 +1,59 @@
+name: Create Releases for Geth
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check Out Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+
+    - name: Build Geth
+      run: make geth
+
+    - name: Create Release for Ubuntu 18.04
+      id: release_ubuntu_1804
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ./geth-ubuntu18
+        name: Ubuntu 18.04 Release - $(date +'%Y%m%d%H%M%S')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Create Release for Ubuntu 20.04
+      id: release_ubuntu_2004
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ./geth-ubuntu20
+        name: Ubuntu 20.04 Release - $(date +'%Y%m%d%H%M%S')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Create Release for Ubuntu 23.04
+      id: release_ubuntu_2304
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ./geth-ubuntu23.04
+        name: Ubuntu 23.04 Release - $(date +'%Y%m%d%H%M%S')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Create Release for Windows
+      id: release_windows
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ./geth-windows.exe
+        name: Windows Release - $(date +'%Y%m%d%H%M%S')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
