@@ -61,7 +61,7 @@ If you encounter any issues or have questions, please open an issue on our GitHu
 Happy node installation!
 
 ---
-enode list 10.02.20264
+enode list 10.02.2026r
 ```shell
 admin.addPeer("enode://5dd9bb009459497091937a78e6fd475232f039df06223c115f6ffed6b58f926d7482860926b8fc80ce18ca4451516dcae12d01d21169e5a9fd3a9dc9dee63629@2.139.240.114:30304");
 admin.addPeer("enode://41816ffa95040e52266da95a9e87d7f2a8779415aa93ad0d4aec6ff60ccb6a5c735431fa44608311f1d71ca4fa1b7bced3d63757200cb29507689f8466431c69@152.70.184.19:30304");
